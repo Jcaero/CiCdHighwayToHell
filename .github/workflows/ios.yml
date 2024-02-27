@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: macos-13
+    runs-on: macos-12
 
     steps:
     - uses: actions/checkout@v4
@@ -17,9 +17,7 @@ jobs:
     - name: Xcode Setup
       uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: '14.3.1'
+        xcode-version: '14.1'
 
     - name: Build
-      run: |
-        cd ciCdHighwayToHell
-        xcodebuild build -project ciCdHighwayToHell.xcodeproj -scheme ciCdHighwayToHell clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
+  run: xcodebuild build -project ciCdHighWayToHell.xcodeproj -scheme ciCdHighWayToHell clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
