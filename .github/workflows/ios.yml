@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: macos-12
+    runs-on: macos-12-xl
 
     steps:
     - uses: actions/checkout@v4
@@ -20,4 +20,4 @@ jobs:
         xcode-version: '14.1'
 
     - name: Build
-  run: xcodebuild build -project ciCdHighWayToHell.xcodeproj -scheme ciCdHighWayToHell clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
+      run: swift build
