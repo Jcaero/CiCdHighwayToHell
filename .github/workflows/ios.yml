@@ -21,5 +21,5 @@ jobs:
 
     - name: Build
       run: |
-        cd GitHubActions
+        cd ciCdHighwayToHell
         xcodebuild build -project ciCdHighwayToHell.xcodeproj -scheme ciCdHighwayToHell clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
